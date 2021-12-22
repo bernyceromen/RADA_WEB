@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+		
+		
+        <title>
+			RADA-Sign up Log in
+        </title>
+
+		<style>
+			#background-video {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	position: fixed;
+	 left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	filter:brightness(40%);
+	}
+		</style>
+	
+		
+    </head>
+	
+    <body>
+		<video autoplay muted loop id="background-video">
+			<source src="blankClass.mp4" type="video/mp4">
+		  </video>
+        <div class="container" id="container">
+	        <div class="form-container sign-up-container">
+		        <form action="#">
+			        <h1>Create Account</h1>
+			    
+			        <input type="text" id="s_fullname" placeholder="Fullname" value="" />
+			        <input type="email" id="s_email" placeholder="Email Address" value="" />
+                    <input type="text" id="s_username" placeholder="Username" value=""/>
+			        <input type="password" id="s_password" placeholder="Password" value=""/>
+                    <input type="password" id="s_confirmpassword" placeholder="Confirm Password" value=""/>
+			        <button id="btn_signUp" type="button">Create Account</button>
+		        </form>
+	        </div>
+	        <div class="form-container sign-in-container">
+		        <form action="#">
+			        <h1>Sign in</h1>
+			       
+			        <input type="text" id="user" placeholder="Username" value="" />
+			        <input type="password" id="pass" placeholder="Password" value="" />
+			        
+			        <button id="btn_logIn" type="button">Log In</button>
+		        </form>
+	        </div>
+	        <div class="overlay-container">
+		        <div class="overlay">
+			        <div class="overlay-panel overlay-left">
+				        <h1>Welcome Back!</h1>
+				        <p>To keep connected with us please login with your personal info</p>
+				        <button class="ghost" id="signIn">Sign In</button>
+			        </div>
+			        <div class="overlay-panel overlay-right">
+				       
+				        <p>Enter your personal details and start journey with us</p>
+                        <div class="dropdown">
+                            <button class="ghost" id="signUp">Sign Up</button>
+                            <div class="dropdown-content">
+                                <a href="#" id="Facilitator">Facilitator</a>
+                                <a href="#" id="Student">Student</a>
+                            </div>
+                        </div>
+			        </div>
+		        </div>
+	        </div>
+        </div>
+
+        <footer>
+	        <p>
+		       
+	        </p>
+        </footer>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="jsScriptMyWeb.js"></script>
+    </body>
+</html>

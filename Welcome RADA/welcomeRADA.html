@@ -1,0 +1,288 @@
+<!Doctype HTML>
+<HTML>
+    <html lang="en"><head>
+
+        <meta charset="UTF-8">
+        
+
+        <title>RADA</title>
+        
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto&amp;subset=latin,devanagari">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+      <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      } 
+      
+      main {
+        flex: 1 0 auto;
+      }
+      
+      h1.title,
+      .footer-copyright a {
+        font-family: 'Architects Daughter', cursive;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+      
+      /* start welcome animation */
+      
+      body.welcome {
+        background: #bf3f2a;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      .welcome .splash {
+        height: 0px;
+        padding: 0px;
+        border: 130em solid #560000;
+        position: fixed;
+        left: 50%;
+        top: 100%;
+        display: block;
+        box-sizing: initial;
+        overflow: hidden;
+      
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+      }
+      
+      .welcome #welcome {
+        background: #bf3f2a ;
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+      }
+         
+      /* moveIn */
+      .welcome header,
+      .welcome a.btn {
+        opacity: 0;
+        animation: moveIn 2s 3.1s ease forwards;
+      }
+      
+      @keyframes init {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+        100% {
+          width: 56px;
+          height: 56px;
+          margin-top: 0px;
+          opacity: 1;
+        }
+      }
+      
+      @keyframes puff {
+        0% {
+          top: 100%;
+          height: 0px;
+          padding: 0px;
+        }
+        100% {
+          top: 50%;
+          height: 100%;
+          padding: 0px 100%;
+        }
+      }
+      
+      @keyframes borderRadius {
+        0% {
+          border-radius: 50%;
+        }
+        100% {
+          border-radius: 0px;
+        }
+      }
+      
+      @keyframes moveDown {
+        0% {
+          top: 50%;
+        }
+        50% {
+          top: 40%;
+        }
+        100% {
+          top: 100%;
+        }
+      }
+      
+      @keyframes moveUp {
+        0% {
+          background: #bf3f2a;
+          top: 100%;
+        }
+        50% {
+          top: 40%;
+        }
+        100% {
+          top: 50%;
+          background: #560000;
+        }
+      }
+      
+      @keyframes materia {
+        0% {
+          background: #560000;
+        }
+        50% {
+          background: #bf3f2a;
+          top: 26px;
+        }
+        100% {
+          background: #560000;
+          width: 100%;
+          height: 64px;
+          border-radius: 0px;
+          top: 26px;
+        }
+      }
+      
+      @keyframes moveIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes hide {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      #background-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+       left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      filter:brightness(40%);
+      }
+
+    .button {
+    background-color: transparent; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 300px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+
+  .button1 {
+    background-color: transparent; 
+    color: maroon; 
+    border: 4px solid maroon;
+  }
+
+  .button1:hover {
+    background-color: #bf3f2a;
+    color: rgb(255, 255, 255);
+  }
+    
+
+      
+</style>
+      
+        <script>
+        window.console = window.console || function(t) {};
+      </script>
+      
+        
+        
+        <script>
+        if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+        }
+      </script>
+      
+      
+      </head>
+      
+      <body translate="no" class="welcome">
+        
+        <span id="splash-overlay" class="splash"></span>
+        <span id="welcome" class="z-depth-4"></span>
+       
+        <header class="navbar-fixed"> 
+          <nav style="background-color:#560000;">
+            <div class="col s12">
+              <ul class="right">
+                
+              </ul>
+            </div>
+          </nav>
+        </header>
+
+        
+        <main class="valign-wrapper">
+          <span class="container grey-text text-lighten-1 ">
+      
+            <video autoplay muted loop id="background-video">
+              <source src="class.mp4" type="video/mp4">
+            </video>
+            <p class="flow-text"  >Welcome to</p>
+            <img src="logo.png" alt="Trulli" width="250" height="250">
+
+            <form style = " position: fixed; float: right;  margin: 300px 300px 0px 0px;" class="button button1" action="https://developers.aris-gail.com/21221ST_CS3101_G3/public_html/AttendanceProjecWeb/skeletal.html#">
+              <button type = "submit" style="background-color: transparent; border: none;">Log In or Sign Up
+              </button>
+            </form>
+           
+            <h1 style="font-family: Arial, Helvetica, sans-serif;">RADA</h1>
+      
+            <blockquote class="flow-text">Registro Automatico De Asistencia</blockquote>
+            
+
+          </span>
+        </main>
+
+        
+      
+       
+      
+        <footer >
+          <div >
+            <div class="container">
+              <time datetime="{{ site.time | date: '%Y' }}">© 2021 RADA</time>
+            </div>
+          </div>
+        </footer>
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        
+       
+      <div class="hiddendiv common"></div></body></html>
+</HTML>
